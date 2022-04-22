@@ -10,25 +10,54 @@ con difficoltà 2 => tra 1 e 81
 con difficoltà 3 => tra 1 e 49
 */
 
-// Assegno il numero di griglie necessarie
-const cellsNumber = 100;
+// Bottone da cliccare per iniziare il gioco 
+document.getElementById("play-btn").addEventListener("click",
+    function () {
+        // Genero la griglia di gioco
+        const gridContainerMaker = document.getElementById("gridContainer");
+        gridContainerMaker.innerHTML = "";
 
-// Genero la griglia di gioco
-// Generare 100 celle all'interno della griglia
+        const challenge = document.getElementById('difficulty').value;
+        console.log(challenge);
 
-for (let i = 1; i <= cellsNumber; i++) {
-    const gridCont = document.getElementById("gridContainer");
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML = `<span>${i}</span>`
-    newDiv.classList.add("cell");
+        let cellsNumber = 0;
 
-    // Cliccando su una casella si aggiunge la classe "active"
-    newDiv.addEventListener("click", function() {
-        this.classList.add("active");
-    });
+        // Assegno il numero di griglie necessarie
+        if (challenge === "easy") {
+            cellsNumber = 100;
+        } else if (challenge === "medium") {
+            cellsNumber = 81;
+        } else if (challenge === "hard") {
+            cellsNumber = 49;
+        }
 
-    gridCont.append(newDiv);
-}
+        // Generare le celle all'interno della griglia a seconda della difficoltà scelta
+        for (let i = 1; i <= cellsNumber; i++) {
+            const gridCont = document.getElementById("gridContainer");
+            const newDiv = document.createElement("div");
+            newDiv.innerHTML = `<span>${i}</span>`
+            // L'if decide quali classi affidare alle caselle a seconda della challenge (ergo la difficoltà impostata)
+            if (challenge === "easy") {
+                newDiv.classList.add("cell-standard");
+            } else if (challenge === "medium") {
+                newDiv.classList.add("cell-medium");
+            } else if (challenge === "hard") {
+                newDiv.classList.add("cell-hard");
+            }
+
+            // Cliccando su una casella si aggiunge la classe "active"
+            newDiv.addEventListener("click", function() {
+                this.classList.add("active");
+            });
+
+            gridCont.append(newDiv);
+        }
+
+        // Per sostituire la scritta iniziale con la griglia:
+        document.getElementById("game-main").classList.remove("d-none")
+        document.getElementById("start-title").classList.add("d-none")
+    }
+);
 
 
 // FUNCTIONS

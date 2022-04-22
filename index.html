@@ -13,12 +13,18 @@
         <div class="container80">
             <div class="d-flex">
                 <img src="img/Logo.png" alt="Logo Boolean">
-                <h1 class="d-inl-blo">Campo Minato</h1>
+                <h1 class="d-inl-blo ml t-big">Campo Minato</h1>
             </div>
             <div class="d-flex">
-                <p>Difficoltà</p>
-                <p>*selettore*</p>
-                <button>play</button>
+                <p class="bold">Difficoltà:</p>
+                <form class="selector">
+                    <select id="difficulty" name="difficulty">
+                    <option value="easy">Standard</option>
+                    <option value="medium">Spicy</option>
+                    <option value="hard">Hell</option>
+                    </select>
+                  </form>
+                <button class="bold btn" id="play-btn">Play</button>
             </div>
         </div>
     </header>
@@ -26,12 +32,15 @@
 
     <!-- MAIN -->
     <main class="d-flex justify-center align-center">
-        <div id="gridContainer">
-            <!-- 
-            <div class="cell">
-                <span>i</span>
-            </div> 
-            -->
+        <h1 id="start-title">Scegli la difficoltà per far partire il gioco!</h1>
+        <div class="main-container d-none" id="game-main">
+            <div id="gridContainer" class="grid-container">
+                <!-- 
+                <div class="cell">
+                    <span>i</span>
+                </div> 
+                -->
+            </div>
         </div>
     </main>
     <!-- /MAIN -->
@@ -39,7 +48,7 @@
     <!-- FOOTER -->
     <footer class="d-flex justify-center">
         <div class="container80">
-            <p class="d-flex">Made with &hearts; by <a href="">Boolean</a></p>
+            <p class="d-flex">Made with &hearts; by <a href="https://boolean.careers/" class="s-ml">Boolean</a></p>
         </div>
     </footer>
     <!-- /FOOTER -->
