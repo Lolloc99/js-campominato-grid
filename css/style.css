@@ -1,6 +1,89 @@
+/* RESET */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* COMMON */
+.container80 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+    /* test */
+    height: 50px;
+}
+
+.d-inl-blo {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-space-bet {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 100px;
+}
+/* /HEADER */
+
+/* MAIN */
+main {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-color: #7fffd4;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+
+    /* test */
+    background-color: lightgreen;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+}
+/* /MAIN */
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 50px;
+}
+/* /FOOTER */
+
+/* 
+COLORI
+
+bg: #7fffd4
+cella-active: #6495ed
+bg play-btn: #efefef
+*/
