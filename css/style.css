@@ -10,9 +10,6 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
-
-    /* test */
-    height: 50px;
 }
 
 .d-inl-blo {
@@ -50,7 +47,7 @@ main {
     background-color: #7fffd4;
 }
 
-.grid-container {
+#gridContainer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -58,9 +55,6 @@ main {
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
-
-    /* test */
-    background-color: lightgreen;
 }
 
 .cell {
@@ -70,7 +64,14 @@ main {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
+    color: black;
 }
+
+.active {
+    color: white;
+    background-color: #6495ed;
+}
+
 /* /MAIN */
 
 /* FOOTER */
